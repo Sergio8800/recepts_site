@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--    <link rel="stylesheet" href="/static/myapp/css/style.css">-->
+    <!--    добавили статику в сэтингс и ввурху. все пути ищищтся отностильно папки стмтик-->
+    <link rel="stylesheet" type="text/css" href="{% static '/myapp2/css/style2.css' %}">
+    <title>{% block title %}Формы{% endblock %}</title>
+
+</head>
+<body>
+<header>
+    <ul>
+        <li><a href="{% url 'index_start_app' %}">Главная</a></li>
+        <li><a href="{% url 'product_form' %}">Добавить рецепт</a></li>
+        <li><a href="{% url 'category_form' %}">Категории</a></li>
+        <div class="dropdown">
+            <button class="dropbtn">Категории</button>
+            <div class="dropdown-content">
+                <a href="#">Ссылка 1</a>
+                <a href="#">Ссылка 2</a>
+                <a href="#">Ссылка 3</a>
+            </div>
+        </div>
+        {% if request.user.is_authenticated%}
+        <li>{{ user.username}} | <a href="{% url 'logout' %}">Выйти</a></li>
+        {% else %}
+        <li><a href="{% url 'loginform' %}">Войти</a></li>
+        <li><a href="{% url 'register' %}">Регистрация</a></li>
+        {% endif %}
+    </ul>
+
+</header>
+<div class="wrapper">
+
+    <div class="content">
+        {% block content %}
+        Контент скоро появится...
+        {% endblock %}
+    </div>
+
+
+    <footer>
+        <h3>We are glad to welcome you to our website!</h3>
+    </footer>
+</div>
+
+</body>
+</html>
