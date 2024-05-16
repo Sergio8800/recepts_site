@@ -77,6 +77,13 @@ def product_form_update(request, product_id):
     return render(request, 'myapp/product_form_update.html', {'form': form, 'message': message})
 
 
+def product_detail(request, product_id):
+    product = Recept.objects.get(pk=product_id)
+    template_name = 'myapp/product_detail.html'
+    context = {'product': product}
+    return render(request, template_name, context)
+
+
 def deleteView(request, product_id):
     obj = Recept.objects.get(pk=product_id)
     if request.method == 'POST':
@@ -127,4 +134,3 @@ class LoginUser(LoginView):
 def logout_user(request):
     logout(request)
     return redirect('loginform')
-

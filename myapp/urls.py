@@ -12,6 +12,7 @@ if settings.DEBUG:
 
         path('cat/add/', category_form, name='category_form'),
         path('product/add/', product_form, name='product_form'),
+        path('product/detail/<int:product_id>/', product_detail, name='product_detail'),
 
         path('login/', LoginUser.as_view(), name='loginform'),
         path('register/', RegisterUser.as_view(), name='register'),

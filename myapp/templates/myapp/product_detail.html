@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+
+<div style="background-color: white">
+
+   <h1 style="color: black"><strong>{{ user.username}}</strong> описание рецепта </h1>
+        <p>Делитесь рецептами! Читайте рецепты других людей! Радуйтесь жизни!</p>
+
+<div>
+
+<div><img src="media/{{ product.image }} "  height="400px" ></div>
+
+    <div>
+        <h3>{{ product.name }}</h3>
+
+
+</div>
+<h4>{{ product.category }}</h4>
+        <p>{{ product.ingrediens  }}</p>
+        <p>{{ product.description  }}</p>
+
+</div>
+
+{% endblock %}
+

@@ -14,6 +14,9 @@
 
 
     <div class="answer">
+        <a href="{% url 'product_detail' product.pk %}" style="display:inline-block">
+            Детали рецепта
+        </a>
         <h4>{{ product.category }}</h4>
     <h3>{{ product.ingrediens|truncatewords:3  }}</h3>
         <h3>{{ product.name }}</h3>
