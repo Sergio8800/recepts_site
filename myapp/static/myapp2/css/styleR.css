@@ -1,0 +1,109 @@
+body{
+    margin-left: 15%; /* Отступ слева */
+     margin-right: 15%; /* Отступ справа */
+     background: rgb(231, 222, 184); /* Цвет фона */
+     padding: 10px; /* Поля вокруг текста */
+}
+p {
+  text-align: left;
+  font: 18px sans-serif;
+}
+li {
+  text-align: left;
+  text-align: center;
+}
+li a {
+  text-decoration-color: none;
+}
+li a:hover{
+  font-size: 24px;
+  text-decoration-color: red;
+}
+code {
+    background: #8db90b;
+    border-radius: 6px;
+    color: #020202;
+    display: block;
+    font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
+    padding: 24px 15px;
+    text-align: center;
+  }
+
+  header{
+    float: left;
+    width: 27%;
+    height: 250px;
+    background: #8db90b;
+    border-radius: 6px;
+    color: #020202;
+    padding: 24px 15px;
+    text-align: center;
+  }
+
+  header_left {
+    float: right;
+    width: 67%;
+    height: 250px;
+    background: #c6de7e;
+    border-radius: 6px;
+    color: #020202;
+    padding: 24px 15px;
+    text-align: center;
+  }
+  section {
+    
+    float: left;
+    width: 27%;
+    height: 550px;
+    background: #c6de7e;
+    border-radius: 6px;
+    color: #020202;
+    padding: 24px 15px;
+    text-align: center;
+  }
+   section li{
+    text-align: left;
+   }
+  aside {
+    float: right;
+    width: 67%;
+    height: 550px;
+    background: #f1f2ef;
+    border-radius: 6px;
+    color: #020202;
+    padding: 24px 15px;
+    text-align: center;
+  }
+  footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #8db90b;
+  color: white;
+  text-align: center;
+  }
+
+  ul{
+    list-style-type: square;
+  }
+
+  .name{
+    text-align: left;
+  }
+  .envelop{
+    width: 250px;
+    text-align: left;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+
+  
+  }
+  .item {
+    flex: 1 1 auto;
+    margin: 0 5px;
+  }
+  .main-heder{
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+  }
